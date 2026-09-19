@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist-test",
+    "types": ["node"],
+    // Deliberately NOT incremental. With a stale .tsbuildinfo, tsc decides the
+    // output is up to date and emits nothing, even after you delete dist-test,
+    // and `node --test` then cheerfully reports "tests 0 / pass 0 / fail 0".
+    "incremental": false
+  },
+  "include": ["src/**/*.ts"]
+}

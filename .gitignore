@@ -1,0 +1,9 @@
+/dist
+/dist-test
+/node_modules
+/coverage
+*.tsbuildinfo
+*.log
+.DS_Store
+.env
+.env.local
